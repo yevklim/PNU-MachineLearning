@@ -9,13 +9,26 @@ How to activate python environment:
 ```bash
 source ./.env/bin/activate
 ```
+Going forward, `(.env)` means that the command must be executed with the environment turned on.
 
-How to freeze python packages list into requirements.txt:
+(.env) How to freeze python packages list into requirements.txt:
 ```bash
 pip freeze > requirements.txt
 ```
 
-How to istall python packages from requirements.txt:
+(.env) How to istall python packages from requirements.txt:
 ```bash
 pip install -r requirements.txt
+```
+
+# jupyter
+
+(.env) How to launch JupyterLab:
+```bash
+jupyter lab
+```
+
+(.env) How to launch Jupyter Notebook:
+```bash
+jupyter lab
 ```
