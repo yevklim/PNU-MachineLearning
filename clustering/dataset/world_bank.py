@@ -36,6 +36,7 @@ class CountyDataSet:
             csv_filepath = get_path_to_country_csv(country_code)
 
         df = pd.read_csv(csv_filepath, header=2)
+        df.dropna(axis=1, how='all', inplace=True)
         df.drop(columns=['Country Name', 'Country Code'], inplace=True)
 
         indicators1: pd.DataFrame = df[['Indicator Name', 'Indicator Code']]
