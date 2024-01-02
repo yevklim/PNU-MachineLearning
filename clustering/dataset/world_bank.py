@@ -65,11 +65,11 @@ class CountyDataSet:
 
     @property
     def indicators_names(self):
-        return self._indicators1[['Indicator Name']]
+        return self._indicators1['Indicator Name']
 
     @property
     def indicators_codes(self):
-        return self._indicators1[['Indicator Code']]
+        return self._indicators1['Indicator Code']
 
     @property
     def indicators_names_by_codes(self):
