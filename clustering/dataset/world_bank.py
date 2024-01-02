@@ -8,8 +8,24 @@ _xtr_dir = os.path.join(_src_dir, 'extracted/')
 def get_path_to_country_csv(country_code: str) -> str:
     return os.path.join(_xtr_dir, f'{country_code}.csv')
 
-_metadata_csv_path = os.path.join(_src_dir, 'metadata.csv')
-metadata_df = pd.read_csv(_metadata_csv_path)
+class Metadata:
+    def __init__(self) -> None:
+        csv_filepath = os.path.join(_src_dir, 'metadata.csv')
+        df = pd.read_csv(csv_filepath)
+
+        self._df = df
+
+    @property
+    def data(self):
+        return self._df
+
+    @property
+    def countries(self):
+        return self._df['Country']
+
+    @property
+    def codes(self):
+        return self._df['Country Code']
 
 class CountyDataSet:
     def __init__(self, csv_filepath: str = None, country_code: str = None) -> None:
