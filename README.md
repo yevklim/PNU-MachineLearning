@@ -9,6 +9,10 @@ How to activate python environment:
 ```bash
 source ./.env/bin/activate
 ```
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+./.env/Scripts/Activate.ps1
+```
 Going forward, `(.env)` means that the command must be executed with the environment turned on.
 
 (.env) How to freeze python packages list into requirements.txt:
@@ -30,5 +34,5 @@ jupyter lab
 
 (.env) How to launch Jupyter Notebook:
 ```bash
-jupyter lab
+jupyter notebook
 ```
